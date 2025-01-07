@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Izzy Tech Team</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="card">
+    <h1>Izzy Tech Team</h1>
+    <p>Register To Become A Member</p>
+    <div class="buttons">
+      <a href="{% url 'admin_login' %}" class="btn">Admin</a>
+      <a href="{% url 'register' %}" class="btn">Register</a>
+    </div>
+  </div>
+</body>
+<style>
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Card Styling */
+  .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px 30px;
+    max-width: 400px;
+    width: 90%;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  /* Title and Text */
+  .card h1 {
+    color: #1a73e8;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Button Styling */
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .btn {
+    background-color: #1a73e8;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0f5bbd;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 500px) {
+    .buttons {
+     
+      gap: 10px;
+    }
+    .btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+</html>
