@@ -10,6 +10,7 @@ class Registration(models.Model):
     email = models.EmailField()
     upload = models.ImageField(upload_to='certificates/')
     position = models.CharField(max_length=255)
+    date_of_birth = models.CharField(max_length=20)
 
     def __str__(self):
         return self.full_name

@@ -16,6 +16,7 @@ def registration_view(request):
         email = request.POST.get('email')
         upload = request.FILES.get('upload')
         position = request.POST.get('position')
+        date_of_birth = request.POST.get('date_of_birth')
 
         if Registration.objects.filter(email=email).exists() or Registration.objects.filter(nic=nic).exists():
             messages.error(request, "Registration already exists")
@@ -29,7 +30,8 @@ def registration_view(request):
             phone=phone,
             email=email,
             upload=upload,
-            position=position
+            position=position,
+            date_of_birth=date_of_birth
         )
         messages.success(request, 'Registration submitted successfully')
         return redirect('validation')
