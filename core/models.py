@@ -1,4 +1,5 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 # Create your models here.
 class Registration(models.Model):
@@ -8,7 +9,7 @@ class Registration(models.Model):
     certificate = models.CharField(max_length=255)
     phone = models.CharField(max_length=20)
     email = models.EmailField()
-    upload = models.ImageField(upload_to='certificates/')
+    upload = CloudinaryField('certificates') 
     position = models.CharField(max_length=255)
     date_of_birth = models.CharField(max_length=20)
 
